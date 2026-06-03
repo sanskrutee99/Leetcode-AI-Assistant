@@ -147,31 +147,3 @@ The extension does **not** collect any data. Your API key never leaves your brow
 | API Key | (required) | Your Groq API key from console.groq.com |
 | Model | `llama3-8b-8192` | Fast, free, accurate for coding problems |
 
----
-
-## Roadmap
-
-- [ ] Hint level control (beginner / intermediate / just the solution)
-- [ ] Complexity analysis on demand
-- [ ] Support for LeetCode contest pages
-- [ ] Export conversation history
-- [ ] Support for additional providers (Gemini, OpenAI)
-
----
-
-## Contributing
-
-PRs are welcome. To contribute:
-
-```bash
-git clone https://github.com/sanskrutee99/Leetcode-AI-Assistant.git
-# Make your changes
-# Load the folder in chrome://extensions to test
-# Open a pull request
-```
-
----
-
-## License
-
-MIT — use it, fork it, build on it.
