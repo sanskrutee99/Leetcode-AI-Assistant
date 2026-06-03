@@ -1,0 +1,115 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.formatted-message pre {
+  background: #0a0a0a;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid #222;
+  margin: 8px 0;
+}
+
+.formatted-message pre code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+}
+
+.formatted-message code.inline {
+  background: #111;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+.message-bubble {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 85%;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  line-height: 1.5;
+  color: #fff;
+}
+
+.message-bubble.user {
+  align-self: flex-end;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.message-bubble.error {
+  background: rgba(248, 113, 113, 0.12);
+  border-color: rgba(248, 113, 113, 0.35);
+  color: #fca5a5;
+}
+
+.typing-indicator {
+  opacity: 0.85;
+}
+
+.api-key-settings input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #333 !important;
+  background: #111 !important;
+  color: #fff !important;
+  font-size: 13px;
+  outline: none;
+  pointer-events: auto !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.api-key-settings input:focus {
+  border-color: #555;
+}
+
+.api-key-settings .settings-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+.api-key-settings .hint {
+  color: #666;
+}
+
+.api-key-settings .btn-primary {
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px;
+  background: #fff !important;
+  color: #000 !important;
+  border: none !important;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  display: block !important;
+}
+
+.api-key-settings .btn-primary:hover {
+  background: #e8e8e8;
+}
+
+.settings-status {
+  margin: 8px 0 0;
+  font-size: 11px;
+}
+
+.settings-status.success {
+  color: #6ee7a0;
+}
+
+.settings-status.error {
+  color: #f87171;
+}
+
+.settings-status.info {
+  color: #888;
+}

@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>LeetCode AI</title>
-</head>
-<body>
-  <h3>LeetCode AI Assistant</h3>
-  <p>Open a LeetCode problem and click "Ask AI"</p>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>LeetCode AI</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <!-- Shown when API key is already saved -->
+    <div id="view-ready" class="view" hidden>
+      <h1>Ready</h1>
+      <p class="subtitle">Groq API key is saved.</p>
+      <p id="ready-key" class="ready-key"></p>
+      <div class="row">
+        <button type="button" id="change-key-btn">Change key</button>
+        <button type="button" id="test-ready-btn">Test</button>
+      </div>
+      <button type="button" id="done-btn" class="primary full">Done</button>
+      <p id="status-ready" class="status info"></p>
+    </div>
+
+    <!-- Shown when user needs to add / change API key -->
+    <div id="view-setup" class="view">
+      <h1>LeetCode AI</h1>
+      <p class="subtitle">
+        <a href="https://console.groq.com/keys" target="_blank" rel="noopener">Get a Groq API key</a>
+        — stored only on your device.
+      </p>
+
+      <form id="api-key-form">
+        <label for="api-key">Groq API key</label>
+        <input
+          id="api-key"
+          type="password"
+          placeholder="gsk_..."
+          autocomplete="off"
+          spellcheck="false"
+          required
+        />
+        <button type="submit" class="primary full">Save &amp; close</button>
+      </form>
+
+      <p id="status-setup" class="status info"></p>
+    </div>
+
+    <script src="shared/storage.js"></script>
+    <script src="shared/groq.js"></script>
+    <script src="popup.js"></script>
+  </body>
 </html>

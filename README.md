@@ -1,38 +1,57 @@
-# LeetCode AI Assistant — Chrome Extension
+# LeetCode AI Assistant
 
-A Chrome extension that adds an AI-powered chat assistant directly to LeetCode problem pages.  
-It helps users understand problems, guide through solution approaches, provide hints, and explain algorithms — all without leaving the coding environment.
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://example.com/build-status)
 
-This assistant uses a backend server integrated with Gemini (Google’s generative AI) to provide contextual responses based on the problem text and user input.
+## LeetCode AI Assistant
 
----
+A Chrome extension that provides LeetCode hints via **Groq**, eliminating the need for manual research and saving you precious time.
 
 ## Features
 
-✔ Slide-in AI chat panel on LeetCode  
-✔ Sends problem description automatically  
-✔ Structured hints and explanations  
-✔ Conversation memory per session  
-✔ Markdown rendering (code & formatting)  
-✔ Clean dark UI designed to feel native to LeetCode
-
----
+* LeetCode hinting via Groq API
+* No build step required - load directly in Chrome
+* Easy API key setup
 
 ## Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| Chrome Extension UI | HTML, JavaScript, CSS |
-| Backend | Node.js, Express |
-| AI Integration | Google Gemini 2.5 Flash API |
-| AI Prompt Logic | System & conversation history |
+* React
+* Node.js
 
----
+## Installation
 
-## How It Works
+### Using Vite
 
-1. **Extension Content Script** injected on LeetCode pages detects problem text.  
-2. **Chat panel UI** lets users ask questions about the problem or approach.  
-3. The extension sends requests to your local backend server (`localhost`).  
-4. Backend queries Gemini (AI model) and returns structured responses.  
-5. Responses are displayed in a modern, slide-in chat interface.
+1. Clone this repository
+2. Run `npm install` or `yarn install` to install dependencies
+3. Run `npm run dev` or `yarn dev` to start the development server
+4. Load the extension in Chrome by going to `chrome://extensions` and clicking **Load unpacked**
+5. Select the `src` directory
+
+## Usage / Getting Started
+
+1. Click the extension icon in Chrome
+2. Paste your Groq API key (`gsk_…`) and click **Save & close**
+3. Start solving LeetCode problems with ease!
+
+## Environment Variables
+
+This project uses a `.env` file to store environment variables. You can add your Groq API key to this file to use it in the extension.
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request with your changes.
+
+## License
+
+This project is licensed under the MIT License.
+
+## API Key Setup
+
+To set up your API key, follow these steps:
+
+1. Click the extension icon in Chrome
+2. Paste your Groq API key (`gsk_…`) and click **Save & close**
+
+## Troubleshooting
+
+If you encounter any issues, please check the [Groq documentation](https://groq.com/docs) for troubleshooting tips.
